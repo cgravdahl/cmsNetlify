@@ -15,9 +15,6 @@ class DocPages extends Component {
                     {title}
                 </h1>
                 <p>{createdAt}</p>
-                <div>
-                    <Img sizes={icon.sizes}/>
-                </div>
                 <hr />
                 <div dangerouslySetInnerHTML={{__html:description.childMarkdownRemark.html}} />
             </div>
@@ -36,11 +33,6 @@ export const pageQuery = graphql`
         contentfulDocumentation(slug: {eq: $slug}) {
             title
             createdAt(formatString: "MMMM DD, YYYY")
-            icon {
-                sizes(maxWidth: 50) {
-                    ...GatsbyContentfulSizes
-                }
-            }
             description {
                 childMarkdownRemark {
                     html

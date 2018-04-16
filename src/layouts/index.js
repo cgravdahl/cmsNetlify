@@ -45,11 +45,6 @@ export const pageQuery = graphql`
                     title
                     slug
                     createdAt(formatString: "MMMM DD, YYYY")
-                    icon {
-                        resolutions(width: 50) {
-                            ...GatsbyContentfulResolutions
-                        }
-                    }
                     description {
                         childMarkdownRemark {
                             html
