@@ -11,9 +11,6 @@ const Documentation = ({node}) => {
         }}>
             <h3><Link to={node.slug}>{node.title}</Link></h3>
             <div>
-                <div>
-                    <Img resolutions={node.icon.resolutions}/>
-                </div>
                 <div dangerouslySetInnerHTML={{__html:node.description.childMarkdownRemark.html}} />
             </div>
         </div>
